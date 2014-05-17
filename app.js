@@ -10,15 +10,15 @@ Ext.application({
 	],
 
 	models: [
+		'Contato'
+	],
 
+	stores: [
+		'Contatos'
 	],
 
 	controllers: [
 		'Main'
-	],
-
-	stores: [
-	
 	],
 
 	viewport: {
@@ -31,7 +31,7 @@ Ext.application({
 	},
 
 	launch: function() {
-		Ext.Viewport.add(Ext.create('Mobile.view.Painel1'));
+		Ext.Viewport.add(Ext.create('Mobile.view.ContatosList'));
 		Ext.Viewport.add(Ext.create('Mobile.view.Painel2'));
 	}
 
