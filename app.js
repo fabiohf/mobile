@@ -5,8 +5,8 @@ Ext.Loader.setConfig({
 Ext.application({
 	name: 'Mobile',
 
-	views: [
-
+	controllers: [
+		'Main'
 	],
 
 	models: [
@@ -17,8 +17,8 @@ Ext.application({
 		'Contatos'
 	],
 
-	controllers: [
-		'Main'
+	views: [
+		'ContatosList'
 	],
 
 	viewport: {
@@ -31,8 +31,7 @@ Ext.application({
 	},
 
 	launch: function() {
-		Ext.Viewport.add(Ext.create('Mobile.view.ContatosList'));
-		Ext.Viewport.add(Ext.create('Mobile.view.Painel2'));
+
 	}
 
 });

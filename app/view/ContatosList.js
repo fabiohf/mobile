@@ -3,6 +3,7 @@ Ext.define('Mobile.view.ContatosList', {
 	config: {
 		store: 'Contatos',
 		itemTpl: '{nome} - {sobrenome}',
+		onItemDisclosure: true,
 		items: [
 			{
 				xtype: 'toolbar',

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contatos>
+	<contato>
+		 <nome>Fabio Henrique</nome>
+		 <sobrenome>Fernandes</sobrenome>
+		 <email>fabio@email.com.br</email>
+		 <endereco>Rua Kieffer</endereco>
+	</contato>
+	<contato>
+		 <nome>Felipe</nome>
+		 <sobrenome>Fernandes</sobrenome>
+		 <email>felipe@email.com.br</email>
+		 <endereco>Rua Bernadete Sendão</endereco>
+	</contato>
+</contatos>
