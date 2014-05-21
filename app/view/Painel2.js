@@ -1,5 +1,6 @@
 Ext.define('Mobile.view.Painel2', {
 	extend: 'Ext.Container',
+	alias: 'widget.painel2',
 	config: {
 		html: 'Painel 2',
 		items: [

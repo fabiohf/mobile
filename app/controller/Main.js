@@ -10,25 +10,34 @@ Ext.define('Mobile.controller.Main', {
 		control: {
 
 			'button[action=mudarPainel1]': {
-				tap: 'onMudarPainel1'
+				tap: 'showContatosList'
 			},
 
 			'button[action=mudarPainel2]': {
 				tap: 'onMudarPainel2'
 			}
+		},
+
+		refs: {
+			contatosList: {
+				xtype: 'contatoslist',
+				selector: 'contatoslist',
+				autoCreate: true
+			},
+			painel2: {
+				xtype: 'painel2',
+				selector: 'painel2',
+				autoCreate: true
+			}
 		}
 	},
 
 	showContatosList: function() {
-		Ext.Viewport.add(Ext.create('Mobile.view.ContatosList'));
-	},
-
-	onMudarPainel1: function(button) {
-		Ext.Viewport.setActiveItem(0);
+		Ext.Viewport.setActiveItem(this.getContatosList());
 	},
 
 	onMudarPainel2: function(button) {
-		Ext.Viewport.add(Ext.create('Mobile.view.Painel2'));
-		Ext.Viewport.setActiveItem(1);
+		Ext.Viewport.setActiveItem(this.getPainel2());
+		console.log(Ext.Viewport.getInnerItems());
 	}
 });

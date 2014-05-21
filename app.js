@@ -18,7 +18,8 @@ Ext.application({
 	],
 
 	views: [
-		'ContatosList'
+		'ContatosList',
+		'Painel2'
 	],
 
 	viewport: {

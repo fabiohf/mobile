@@ -1,5 +1,6 @@
 Ext.define('Mobile.view.ContatosList', {
 	extend: 'Ext.dataview.List',
+	alias: 'widget.contatoslist',
 	config: {
 		store: 'Contatos',
 		itemTpl: '{nome} - {sobrenome}',
