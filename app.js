@@ -19,7 +19,7 @@ Ext.application({
 
 	views: [
 		'ContatosList',
-		'Painel2'
+		'ContatosForm'
 	],
 
 	viewport: {

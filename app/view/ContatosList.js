@@ -1,10 +1,7 @@
 Ext.define('Mobile.view.ContatosList', {
 	extend: 'Ext.dataview.List',
-	alias: 'widget.contatoslist',
-	config: {
-		store: 'Contatos',
-		itemTpl: '{nome} - {sobrenome}',
-		onItemDisclosure: true,
+	alias: 'widget.contatosList',
+	config: {	
 		items: [
 			{
 				xtype: 'toolbar',
@@ -18,11 +15,14 @@ Ext.define('Mobile.view.ContatosList', {
 	            	{
 	        			xtype: 'button',
 	        			ui: 'forward',
-	                	text: 'Mudar Painel 2',
-	                	action: 'mudarPainel2'
+	                	text: 'Novo Contato',
+	                	action: 'novoContato'
 	            	}
 	            ]
         	}
-		]
+		],
+		store: 'Contatos',
+		itemTpl: '{nome} - {sobrenome}',
+		onItemDisclosure: true
 	}
 });

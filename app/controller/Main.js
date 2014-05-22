@@ -1,32 +1,32 @@
 Ext.define('Mobile.controller.Main', {
 	extend: 'Ext.app.Controller',
 	config: {
-
 		routes: {
 			'': 'showContatosList',
 			'index.html': 'showContatosList',
 		},
 
 		control: {
-
-			'button[action=mudarPainel1]': {
+			'button[action=listarContato]': {
 				tap: 'showContatosList'
 			},
-
-			'button[action=mudarPainel2]': {
-				tap: 'onMudarPainel2'
+			'button[action=novoContato]': {
+				tap: 'showContatosForm'
+			},
+			contatosList: {
+				itemtap: 'showContatosForm'
 			}
 		},
 
 		refs: {
 			contatosList: {
-				xtype: 'contatoslist',
-				selector: 'contatoslist',
+				xtype: 'contatosList',
+				selector: 'contatosList',
 				autoCreate: true
 			},
-			painel2: {
-				xtype: 'painel2',
-				selector: 'painel2',
+			contatosForm: {
+				xtype: 'contatosForm',
+				selector: 'contatosForm',
 				autoCreate: true
 			}
 		}
@@ -35,9 +35,13 @@ Ext.define('Mobile.controller.Main', {
 	showContatosList: function() {
 		Ext.Viewport.setActiveItem(this.getContatosList());
 	},
-
-	onMudarPainel2: function(button) {
-		Ext.Viewport.setActiveItem(this.getPainel2());
-		console.log(Ext.Viewport.getInnerItems());
+	
+	showContatosForm: function(view, index, target, record, evt, opts) {
+		if(record && record.data) {
+			this.getContatosForm().setRecord(record);
+		} else {
+			this.getContatosForm().reset();
+		}
+		Ext.Viewport.setActiveItem(this.getContatosForm());
 	}
 });

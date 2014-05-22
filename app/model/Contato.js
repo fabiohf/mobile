@@ -7,6 +7,12 @@ Ext.define('Mobile.model.Contato', {
 			},
 			{
 				name: 'sobrenome'
+			},
+			{
+				name: 'email'
+			},
+			{
+				name: 'endereco'
 			}
 		]
 	}
