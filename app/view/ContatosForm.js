@@ -8,6 +8,7 @@ Ext.define('Mobile.view.ContatosForm', {
 	            docked: 'top',
 	            ui: 'light',
 	            title: 'Editar Contato',
+	            itemId: 'toolbarContatosForm',
 	            items: [
 	            	{
             			xtype: 'button',
@@ -49,9 +50,14 @@ Ext.define('Mobile.view.ContatosForm', {
         		action: 'salvarContato'
         	},
         	{
+        		xtype: 'container',
+        		height: 20
+        	},
+        	{
         		xtype: 'button',
         		ui: 'action',
         		text: 'Apagar',
+        		action: 'apagarContato',
         		hidden: true
         	}
 		]

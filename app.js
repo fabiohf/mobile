@@ -5,6 +5,10 @@ Ext.Loader.setConfig({
 Ext.application({
 	name: 'Mobile',
 
+	requires: [        
+		'Ext.MessageBox'    
+	],
+
 	controllers: [
 		'Main'
 	],
@@ -32,7 +36,6 @@ Ext.application({
 	},
 
 	launch: function() {
-
 	}
 
 });

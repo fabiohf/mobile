@@ -3,14 +3,10 @@ Ext.define('Mobile.store.Contatos', {
 	config: {
 		model: 'Mobile.model.Contato',
 		proxy: {
-			type: 'ajax',
-			url: 'app/data/contatos.xml',
-			reader: {
-				type: 'xml',
-				record: 'contato',
-				rootProperty: 'contatos'
-			}
+			type: 'localstorage',
+			id: 'mobile'
 		},
-		autoLoad: true
+		autoLoad: true,
+		autoSync: true
 	}
 });

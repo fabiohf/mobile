@@ -22,7 +22,7 @@ Ext.define('Mobile.view.ContatosList', {
         	}
 		],
 		store: 'Contatos',
-		itemTpl: '{nome} - {sobrenome}',
+		itemTpl: '{nome} {sobrenome}',
 		onItemDisclosure: true
 	}
 });
